@@ -1,5 +1,6 @@
 environment:
-  AZURE_SMB_KEY: if71+kDyW4wl7Xbfgzi5G0Faau1OcfdfT/KU9LK+9Cmjv/DINmssTw/bfsqvDfie4RiDUsy/zMCOiSxQZ9IkiHVgx9lrkfZ1/ysDn50qwvklCKJhTjhS+UQQ8cJPrZ9q
+  AZURE_SMB_KEY:
+    secure: if71+kDyW4wl7Xbfgzi5G0Faau1OcfdfT/KU9LK+9Cmjv/DINmssTw/bfsqvDfie4RiDUsy/zMCOiSxQZ9IkiHVgx9lrkfZ1/ysDn50qwvklCKJhTjhS+UQQ8cJPrZ9q
 
 build: off
 
