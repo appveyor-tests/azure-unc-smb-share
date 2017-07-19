@@ -1,0 +1,9 @@
+environment:
+  AZURE_SMB_KEY: if71+kDyW4wl7Xbfgzi5G0Faau1OcfdfT/KU9LK+9Cmjv/DINmssTw/bfsqvDfie4RiDUsy/zMCOiSxQZ9IkiHVgx9lrkfZ1/ysDn50qwvklCKJhTjhS+UQQ8cJPrZ9q
+
+build: off
+
+test_script:
+- ps: Disable-NetFirewallRule -DisplayName 'File and Printer Sharing (SMB-Out)'
+- ps: Disable-NetFirewallRule -DisplayName 'Core Networking - Group Policy (NP-Out)'
+- net use J: \\appveyordevtestdeleteme.file.core.windows.net\test101 /u:AZURE\appveyordevtestdeleteme %AZURE_SMB_KEY%
