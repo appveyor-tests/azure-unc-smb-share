@@ -5,6 +5,4 @@ environment:
 build: off
 
 test_script:
-- ps: Disable-NetFirewallRule -DisplayName 'File and Printer Sharing (SMB-Out)'
-- ps: Disable-NetFirewallRule -DisplayName 'Core Networking - Group Policy (NP-Out)'
 - 'net use J: \\appveyordevtestdeleteme.file.core.windows.net\test101 /u:AZURE\appveyordevtestdeleteme %AZURE_SMB_KEY%'
