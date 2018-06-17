@@ -7,8 +7,8 @@ init:
 - ps: systeminfo
 
 test_script:
-#- ps: Disable-NetFirewallRule -DisplayName 'DockerSmbMount'
-- ps: Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
+- ps: Disable-NetFirewallRule -DisplayGroup 'File and Printer Sharing' -Direction Outbound
+#- ps: Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
 - 'net use J: \\appveyordevtestdeleteme.file.core.windows.net\test101 /u:AZURE\appveyordevtestdeleteme %AZURE_SMB_KEY%'
 
 build: off
